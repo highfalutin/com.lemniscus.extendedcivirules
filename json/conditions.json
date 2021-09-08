@@ -5,11 +5,6 @@
     "class_name": "CRM_CivirulesConditions_Contribution_IsMembershipPayment"
   },
   {
-    "name": "contribution_is_recurring",
-    "label": "Is Contribution recurring?",
-    "class_name": "CRM_CivirulesConditions_Contribution_IsRecurring"
-  },
-  {
     "name": "contribution_position_in_recurring_series",
     "label": "Position of contribution in its recurring contribution series",
     "class_name": "CRM_CivirulesConditions_Contribution_PositionInRecurringSeries"
