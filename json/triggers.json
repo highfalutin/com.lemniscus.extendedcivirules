@@ -1,0 +1,7 @@
+[
+  {
+    "name": "new_membership_payment_extended",
+    "label": "Membership Payment is added (extended version)",
+    "class_name": "CRM_CivirulesPostTrigger_MembershipPayment"
+  }
+]
