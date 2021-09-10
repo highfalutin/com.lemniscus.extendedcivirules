@@ -42,4 +42,20 @@ class CRM_Extendedcivirules_Upgrader extends CRM_Extendedcivirules_Upgrader_Base
     return TRUE;
   }
 
+  public function upgrade_1002() {
+    $result = civicrm_api3('CiviRuleAction', 'get', [
+      'class_name' => 'CRM_CivirulesActions_Contribution_FinancialType',
+    ]);
+    $actions = $result['values'] ?? [];
+
+    while (count($actions) > 1) {
+      $toDelete = array_pop($actions);
+      civicrm_api('CiviRuleAction', 'delete', [
+        'id' => $toDelete['id']
+      ]);
+    }
+
+    return TRUE;
+  }
+
 }

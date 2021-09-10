@@ -1,10 +1,5 @@
 [
   {
-    "name": "contribution_financial_type",
-    "label": "Set the Financial Type for a Contribution",
-    "class_name": "CRM_CivirulesActions_Contribution_FinancialType"
-  },
-  {
     "name": "contribution_source",
     "label": "Set the Source of a Contribution",
     "class_name": "CRM_CivirulesActions_Contribution_Source"
