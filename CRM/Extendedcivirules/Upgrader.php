@@ -13,7 +13,7 @@ class CRM_Extendedcivirules_Upgrader extends CRM_Extendedcivirules_Upgrader_Base
   public function uninstall() {
     $this->uninstallFromJson('CiviRuleTrigger', 'json/triggers.json');
     $this->uninstallFromJson('CiviRuleAction', 'json/actions.json');
-    $this->uninstallFromJson('CiviRuleConditions', 'json/conditions.json');
+    $this->uninstallFromJson('CiviRuleCondition', 'json/conditions.json');
   }
 
   protected function uninstallFromJson($entity, $filePath): void {
