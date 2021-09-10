@@ -26,4 +26,20 @@ class CRM_Extendedcivirules_Upgrader extends CRM_Extendedcivirules_Upgrader_Base
     }
   }
 
+  public function upgrade_1001() {
+    $result = civicrm_api3('CiviRuleCondition', 'get', [
+      'class_name' => 'CRM_CivirulesConditions_Contribution_IsRecurring',
+    ]);
+    $conditions = $result['values'] ?? [];
+
+    while (count($conditions) > 1) {
+      $toDelete = array_pop($conditions);
+      civicrm_api('CiviRuleCondition', 'delete', [
+        'id' => $toDelete['id']
+      ]);
+    }
+
+    return TRUE;
+  }
+
 }
