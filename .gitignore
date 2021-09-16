@@ -1,3 +1,6 @@
-# Ignore Mac-specific files
+# Mac-specific files
 .DS_Store
 ._.DS_Store
+
+# Test-related files
+.phpunit.result.cache

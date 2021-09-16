@@ -1,4 +1,7 @@
 <?php
+
+use CRM_Extendedcivirules_ExtensionUtil as E;
+
 /**
  * This class manages the installation, upgrading, etc of the Extended CiviRules extension.
  */
