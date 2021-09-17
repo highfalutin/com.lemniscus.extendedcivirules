@@ -15,7 +15,11 @@ class CRM_CivirulesPostTrigger_MembershipPayment extends CRM_Civirules_Trigger_P
    * @return CRM_Civirules_TriggerData_EntityDefinition
    */
   protected function reactOnEntity() {
-    return new CRM_Civirules_TriggerData_EntityDefinition($this->objectName, $this->objectName, $this->getDaoClassName(), 'MembershipPayment');
+    return new CRM_Civirules_TriggerData_EntityDefinition(
+      'Membership Payment',
+      'MembershipPayment',
+      $this->getDaoClassName(),
+      'MembershipPayment');
   }
 
   /**
