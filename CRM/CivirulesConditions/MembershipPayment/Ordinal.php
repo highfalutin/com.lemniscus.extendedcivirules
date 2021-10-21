@@ -37,7 +37,7 @@ class CRM_CivirulesConditions_MembershipPayment_Ordinal extends CRM_Civirules_Co
    */
   public function isConditionValid(CRM_Civirules_TriggerData_TriggerData $triggerData) {
     $ordinalNumber = $this->conditionParams['ordinal_number'];
-    if (!is_integer($ordinal_number + 0)) {
+    if (!is_integer($ordinalNumber + 0)) {
       throw new Exception('X must be an integer for CiviRules condition "Payment is the Xth one for its membership"', 1);
     }
 
