@@ -35,8 +35,8 @@ class CRM_CivirulesPostTrigger_MembershipPayment extends CRM_Civirules_Trigger_P
    * Override getTriggerDataFromPost() so that we can append the Contribution
    * entity to the trigger data.
    */
-  protected function getTriggerDataFromPost($op, $objectName, $objectId, $objectRef) {
-    $triggerData = parent::getTriggerDataFromPost($op, $objectName, $objectId, $objectRef);
+  protected function getTriggerDataFromPost($op, $objectName, $objectId, $objectRef, $eventID = NULL) {
+    $triggerData = parent::getTriggerDataFromPost($op, $objectName, $objectId, $objectRef, $eventID);
     $membershipPayment = $triggerData->getEntityData('MembershipPayment');
     $params = array('id' => $membershipPayment['contribution_id']);
     $contribution = civicrm_api3('Contribution', 'getsingle', $params);
